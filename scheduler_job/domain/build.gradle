@@ -1,0 +1,20 @@
+group 'com.wenka.scheduler'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.5
+
+repositories {
+    maven {
+        url "http://192.168.1.100:8091/nexus/content/groups/public"
+    }
+    maven {
+        url "http://192.168.1.100:8091/nexus/content/repositories/yunland"
+    }
+    jcenter()
+}
+
+dependencies {
+    compile 'org.quartz-scheduler:quartz:2.2.3'
+}
