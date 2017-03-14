@@ -12,10 +12,7 @@ subprojects {
 
     repositories {
         maven {
-            url "http://192.168.1.100:8091/nexus/content/groups/public"
-        }
-        maven {
-            url "http://192.168.1.100:8091/nexus/content/repositories/yunland"
+            url "******"
         }
         jcenter()
     }
@@ -74,10 +71,6 @@ subprojects {
         compile group: 'org.apache.poi', name: 'poi', version: '3.14'
         compile group: 'org.apache.poi', name: 'poi-ooxml', version: '3.14'
 
-        compile 'com.moyuer.bsf:moyuer_bsf:1.1.58'
-        compile 'tech.yunland.cms:yun-cms-web:1.2.23'
-        compile 'tech.yunland.yshop:yun-weixin-web:1.6.20'
-
         compile 'org.quartz-scheduler:quartz:2.2.3'
 
         testCompile group: 'junit', name: 'junit', version: '4.11'
@@ -97,24 +90,12 @@ subprojects {
         deployerJars
     }
 
-    uploadArchives {
-        repositories {
-            mavenDeployer {
-                configuration = configurations.deployerJars
-                repository(url: "http://192.168.1.100:8091/nexus/content/repositories/yunland") {
-                    authentication(userName: "admin", password: "admin")
-                }
-            }
-        }
-    }
+
 }
 
 repositories {
     maven {
-        url "http://192.168.1.100:8091/nexus/content/groups/public"
-    }
-    maven {
-        url "http://192.168.1.100:8091/nexus/content/repositories/yunland"
+        url "******"
     }
     jcenter()
 }
