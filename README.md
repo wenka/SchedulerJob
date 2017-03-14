@@ -65,3 +65,5 @@ runTask(SchedulerJob task, Scheduler scheduler)
 //更新任务
 rescheduleJob(Scheduler scheduler, SchedulerJob schedulerJob)
 ```
+## 5.jar下载 
+[下载JAR1.0](https://raw.githubusercontent.com/wenka/SchedulerJob/master/wenka-scheduler-1.0.jar)
